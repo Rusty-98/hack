@@ -1,23 +1,10 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
     const navigate = useNavigate();
     const [menu, setMenu] = useState(true);
     const [isProp, setIsProp] = useState(false);
     const [token, setToken] = useState(false);
-
-    const notify = () => toast.success('✅️ Logout Done!', {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-    });
 
     useEffect(() => {
         let storedToken = localStorage.getItem("auth");
@@ -36,7 +23,6 @@ const Navbar = () => {
         localStorage.removeItem('prop');
         localStorage.removeItem('user');
         setToken(false);
-        notify();
         navigate('/login');
         // Optional: Redirect to login page or any other desired action
     };
@@ -45,13 +31,8 @@ const Navbar = () => {
         navigate('/login');
     }
 
-    const handleTabClick = (tabName) => {
-        setActiveTab(tabName); // Set the active tab
-    };
-
     return (
         <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-            <ToastContainer />
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link to={"/"} className="flex items-center space-x-3 rtl:space-x-reverse">
                     <div className="h-full w-20 overflow-hidden">
