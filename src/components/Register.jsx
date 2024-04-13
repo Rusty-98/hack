@@ -41,7 +41,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/user/register', formData);
+            const response = await axios.post('https://hackserver-1llx.onrender.com/user/register', formData);
             if (response.status === 200) {
                 console.log(response.data)
                 notify();

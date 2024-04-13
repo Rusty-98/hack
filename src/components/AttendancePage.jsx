@@ -67,7 +67,7 @@ const AttendancePage = () => {
 
     const submitAttendance = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/api/markAttendance', { attendanceRecords });
+            const response = await axios.post('https://hackserver-1llx.onrender.com/api/markAttendance', { attendanceRecords });
             console.log(response.data);
             // alert("Attendance Submission Success");
             notify();
