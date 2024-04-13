@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/Team.css'
+import { useNavigate } from 'react-router-dom';
 const Team = () => {
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const auth = localStorage.getItem('auth');
+        if (!auth) {
+            navigate('/login');
+        }
+    }, [])
+
+
     return (
         <div className='bg-[#e3f2fd] mt-16 min-h-screen'>
             <section className='bg-[#e3f2fd]'>
