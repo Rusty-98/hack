@@ -1,7 +1,7 @@
 import React from 'react';
 import Chat from './Chat';
 import '../styles/projects.css';
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
 
