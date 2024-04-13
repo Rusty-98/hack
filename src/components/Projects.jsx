@@ -1,8 +1,15 @@
 import React from 'react';
 import Chat from './Chat';
 import '../styles/projects.css';
+import { useLocation } from 'react-router-dom';
 
 const Projects = () => {
+
+    const navigate = useNavigate();
+    const auth = localStorage.getItem('auth');
+    if (!auth) {
+        navigate('/login');
+    }
     const projectsData = [
         {
             type: 'Website',

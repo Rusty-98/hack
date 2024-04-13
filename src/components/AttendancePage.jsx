@@ -12,6 +12,10 @@ const AttendancePage = () => {
     const [selectedBranch, setSelectedBranch] = useState('');
     const [attendanceRecords, setAttendanceRecords] = useState([]);
 
+    const auth  = localStorage.getItem('auth');
+    if(!auth){
+        navigate('/login');
+    }
     const notify = () => toast.success('✅️ Attendance Submission Success!', {
         position: "top-right",
         autoClose: 1000,
