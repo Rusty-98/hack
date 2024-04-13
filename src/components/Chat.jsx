@@ -12,7 +12,7 @@ const Chat = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     const name = user?.name;
 
-    const socket = useMemo(() => io("http://localhost:5000/"), []);
+    const socket = useMemo(() => io("https://hackchat-juw3.onrender.com/"), []);
 
     const [isOpen, setIsOpen] = useState(false);
     const [message, setMessage] = useState('');
