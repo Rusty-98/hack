@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import students from '../Data/students';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import * as XLSX from 'xlsx';
 
 const AttendancePage = () => {
     const navigate = useNavigate();
@@ -12,8 +13,8 @@ const AttendancePage = () => {
     const [selectedBranch, setSelectedBranch] = useState('');
     const [attendanceRecords, setAttendanceRecords] = useState([]);
 
-    const auth  = localStorage.getItem('auth');
-    if(!auth){
+    const auth = localStorage.getItem('auth');
+    if (!auth) {
         navigate('/login');
     }
     const notify = () => toast.success('✅️ Attendance Submission Success!', {
@@ -82,6 +83,19 @@ const AttendancePage = () => {
         }
     };
 
+    const exportToExcel = () => {
+        const formattedData = attendanceRecords.map(record => ({
+            'Roll No.': record.roll,
+            'Student Name': record.studentName,
+            'Status': record.status
+        }));
+
+        const ws = XLSX.utils.json_to_sheet(formattedData);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Attendance');
+        XLSX.writeFile(wb, 'Attendance.xlsx');
+    };
+
     return (
         <div className="text-center mt-28 pt-5 w-[95%] md:w-[90%] mx-auto">
             <h2 className='text-3xl md:text-4xl font-bold tracking-wide mt-5'>Attendance Tracking</h2>
@@ -131,7 +145,10 @@ const AttendancePage = () => {
                     ))}
                 </tbody>
             </table>
-            <button onClick={submitAttendance} className="submit-btn">Submit Attendance</button>
+            <div className='flex gap-2 items-center justify-center'>
+                <button onClick={submitAttendance} className="submit-btn">Submit Attendance</button>
+                <button onClick={exportToExcel} className="submit-btn">Export to Excel</button>
+            </div>
             <ToastContainer />
         </div>
     );
