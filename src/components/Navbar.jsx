@@ -85,12 +85,6 @@ const Navbar = () => {
                             <li>
                                 <a href="/" className="text-white">Home</a>
                             </li>
-                            {isProp && <li>
-                                <a href="/attendance" className="text-white">Tools</a>
-                            </li>}
-                            {!isProp && <li>
-                                <a href="/studatten" className="text-white">Attendance</a>
-                            </li>}
                             <li>
                                 <a href="/project" className="text-white">Projects</a>
                             </li>
