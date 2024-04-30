@@ -6,7 +6,7 @@ const Slider = () => {
     <div className='w-full left-0 top-0 h-screen absolute z-20 bg-black'>
       <svg viewBox="0 0 1320 300">
         <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-          NucleoNex
+          VaiTech
         </text>
       </svg>
     </div>

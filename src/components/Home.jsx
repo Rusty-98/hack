@@ -11,7 +11,7 @@ const Home = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 5000);
+        }, 3000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -48,7 +48,7 @@ const Home = () => {
             {loading ? <Slider /> : (
                 <div className="text-center mb-8 w-[90vw] mx-auto">
                     <header>
-                        <h1 className="text-6xl font-bold font-serif tracking-wide text-gray-800">Welcome to the NucleoNex R&D Lab</h1>
+                        <h1 className="text-6xl font-bold font-serif tracking-wide text-gray-800">Welcome to the VaiTech R&D Company</h1>
                         <p className="text-gray-600 my-10 text-3xl">Empowering Innovation</p>
                         <CustomCarousel>
                             {images.map((image, index) => (

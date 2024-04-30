@@ -9,7 +9,7 @@ svg {
 }
 svg text {
 	text-transform: uppercase;
-	animation: stroke 5s infinite alternate;
+	animation: stroke 3s infinite alternate;
 	stroke-width: 2;
 	stroke: #365fa0;
 	font-size: 140px;
