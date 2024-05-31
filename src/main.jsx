@@ -17,20 +17,17 @@ const tokken = localStorage.getItem("auth");
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
-      {/* <Header /> */}
-      <Navbar /> 
+      <Navbar />
       <Routes>
-        {/* <Route path="/" element={<App />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/project" element={<Projects />} />        
+        <Route path="/project" element={<Projects />} />
         <Route path="/team" element={<Team />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/chat" element={ tokken? <Chat /> : <Login />} />
+        <Route path="/chat" element={tokken ? <Chat /> : <Login />} />
       </Routes>
-      {/* <Contact /> */}
     </Router>
   </React.StrictMode>,
 )
