@@ -48,7 +48,7 @@ const Home = () => {
             {loading ? <Slider /> : (
                 <div className="text-center mb-8 w-[90vw] mx-auto">
                     <header>
-                        <h1 className="text-6xl font-bold font-serif tracking-wide text-gray-800">Welcome to the VaiTech R&D Company</h1>
+                    <h1 className="text-6xl font-bold font-serif tracking-wide text-gray-800">Welcome to the VaiTech R&D (VRD) Company</h1>
                         <p className="text-gray-600 my-10 text-3xl">Empowering Innovation</p>
                         <CustomCarousel>
                             {images.map((image, index) => (
@@ -64,10 +64,7 @@ const Home = () => {
                             </div>
                             <div className='flex flex-col mt-10 md:mt-0 justify-center'>
                                 <p className="text-lg text-gray-700 leading-relaxed">
-                                    At NucleoNex R&D Lab, our mission is to foster innovation and drive technological advancement through cutting-edge research, collaborative partnerships, and knowledge dissemination. We are committed to pushing the boundaries of what's possible, exploring new horizons, and creating impactful solutions that address the challenges of today and shape the possibilities of tomorrow.
-                                </p>
-                                <p className="text-lg text-gray-700 leading-relaxed mt-4">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum ligula non ligula finibus, sed fringilla libero tempus. Cras at magna nec tortor porta tincidunt. Vivamus et felis vestibulum, tempus nisl a, finibus nulla. Nullam nec tortor nec urna finibus fermentum vel vitae ligula. Vestibulum tincidunt purus sit amet turpis fringilla, eget interdum purus hendrerit. Donec condimentum libero id libero vestibulum, vel tempor ipsum sollicitudin. Vivamus auctor elit non eros mollis, at tempor neque malesuada.
+                                    At VaiTech R&D Company, our mission is to foster innovation and drive technological advancement through cutting-edge research, collaborative partnerships, and knowledge dissemination. We are committed to pushing the boundaries of what's possible, exploring new horizons, and creating impactful solutions that address the challenges of today and shape the possibilities of tomorrow.
                                 </p>
                             </div>
                         </div>

@@ -1,24 +1,24 @@
-.show{
+.show {
     display: none;
 }
 
-.hide{
+.hide {
     opacity: 0.5;
     height: 0;
     display: none;
 }
 
-@media screen and (max-width: 768px){
-    .show{
+@media screen and (max-width: 768px) {
+    .show {
         display: block;
         opacity: 1;
-        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s;   
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s;
     }
 
-    .hide{
+    .hide {
         display: block;
         opacity: 0.5;
         height: 0;
     }
-    
+
 }

@@ -1,7 +1,21 @@
 import React from 'react';
-import '../styles/contact.css';
+import '../styles/contact.css'; 
+import link from '../assets/svg/contact';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
+    const notify = () => toast.success('✅️ Feedback Takken!', {
+        position: "bottom-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+    });
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -18,48 +32,24 @@ const Contact = () => {
 
         // If all fields are filled, proceed with form submission
         // You can handle form submission logic here
-        alert('Feedback Takken!');
+        // alert('Feedback Takken!');
+        notify();
         form.reset(); // Reset form fields
     };
 
     return (
         <section>
-            <div className="section-header">
+
+            <div className="section-header mt-20">
                 <div className="container">
-                    <h2>Contact Us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <h2 className='font-bold'>Contact Us</h2>
+                    <p className='text-xl text-justify mb-10'>Kindly Contact us and allow me to develop the software projects through our <Link to={"/"} className='text-blue-600 underline'>website</Link>, social media platforms <Link to={'https://www.linkedin.com/in/vaibhav-shankhwar-4a227a222/'} className='text-blue-600 underline'>LinkedIn</Link>, & by email (shankhwarvaibhav2001@gmail.com) .</p>
                 </div>
             </div>
             <div className="container">
                 <div className="row">
                     <div className="contact-info">
-                        <div className="contact-info-item">
-                            <div className="contact-info-icon">
-                                <i className="fas fa-home" />
-                            </div>
-                            <div className="contact-info-content">
-                                <h4>Address</h4>
-                                <p>4671 Sugar Camp Road,<br /> Owatonna, Minnesota, <br />55060</p>
-                            </div>
-                        </div>
-                        <div className="contact-info-item">
-                            <div className="contact-info-icon">
-                                <i className="fas fa-phone" />
-                            </div>
-                            <div className="contact-info-content">
-                                <h4>Phone</h4>
-                                <p>571-457-2321</p>
-                            </div>
-                        </div>
-                        <div className="contact-info-item">
-                            <div className="contact-info-icon">
-                                <i className="fas fa-envelope" />
-                            </div>
-                            <div className="contact-info-content">
-                                <h4>Email</h4>
-                                <p>ntamerrwael@mfano.ga</p>
-                            </div>
-                        </div>
+                        <img src={link} alt="" />
                     </div>
                     <div className="contact-form">
                         <form onSubmit={handleSubmit} id="contact-form">
@@ -82,6 +72,7 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
+                <ToastContainer />
             </div>
         </section>
     );

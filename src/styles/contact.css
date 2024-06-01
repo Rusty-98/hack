@@ -6,7 +6,7 @@ section {
   z-index: 3;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: hsl(0, 0%, 64%);
+  color: black;
 }
 
 .container {
@@ -23,17 +23,13 @@ section {
 }
 
 .section-header h2 {
-  color: #FFF;
-  font-weight: bold;
-  font-size: 3em;
+  font-weight: 900;
+  font-size: 3.5em;
   margin-bottom: 20px;
 }
 
-.section-header p {
-  color: #FFF;
-}
 
-.row  {
+.row {
   display: flex;
   flwx-wrap: wrap;
   align-items: center;
@@ -99,7 +95,7 @@ section {
 }
 
 .contact-form .input-box input,
-.contact-form .input-box textarea{
+.contact-form .input-box textarea {
   width: 100%;
   padding: 5px 0;
   font-size: 16px;
@@ -121,15 +117,14 @@ section {
   color: #666;
 }
 
-.contact-form .input-box input:focus ~ span,
-.contact-form .input-box textarea:focus ~ span{
+.contact-form .input-box input:focus~span,
+.contact-form .input-box textarea:focus~span {
   color: #e91e63;
   font-size: 12px;
   transform: translateY(-20px);
 }
 
-.contact-form .input-box input[type="submit"]
-{
+.contact-form .input-box input[type="submit"] {
   width: 100%;
   background: #00bcd4;
   color: #FFF;
@@ -141,8 +136,7 @@ section {
   transition: 0.5s;
 }
 
-.contact-form .input-box input[type="submit"]:hover
-{
+.contact-form .input-box input[type="submit"]:hover {
   background: #FFF;
   color: #00bcd4;
 }
@@ -152,16 +146,16 @@ section {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .row {
     flex-direction: column;
   }
-  
+
   .contact-info {
     margin-bottom: 40px;
     width: 100%;
   }
-  
+
   .contact-form {
     width: 100%;
   }

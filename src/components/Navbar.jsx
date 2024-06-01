@@ -81,7 +81,7 @@ const Navbar = () => {
                 </div>
                 {
                     <div className={`${show ? "show" : "hide"} h-screen w-full overflow-hidden bg-gray-900 flex flex-col items-center`}>
-                        <ul className="flex text-4xl flex-col p-4 justify-evenly h-[60%]">
+                        <ul className="flex text-4xl flex-col p-4 justify-evenly h-[60%]" onClick={handleNav}>
                             <li>
                                 <Link to={"/"} className="text-white">Home</Link>
                             </li>
